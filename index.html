@@ -29,11 +29,16 @@
     }
 
     function postMessageToiOS(postData) {
-        window.webkit.messageHandlers.callBackHandler.postMessage(postData);
+        if(window.webkti.messageHandlers != undefined){
+            window.webkit.messageHandlers.callBackHandler.postMessage(postData);
+        }
+        
     }
     
     function postMessageToAndroid(postData) {
-        window.TeamPlayAndroid.setAddress(postData);
+        if( window.TeamPlayAndroid != undefined){
+            window.TeamPlayAndroid.setAddress(postData);
+        }
     }
 
     var element_layer = document.getElementById('layer');
