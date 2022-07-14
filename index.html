@@ -28,9 +28,9 @@
       console.log("onReceivedActivityMessageViaJavascriptInterface "+event);
     }
     
-    function postMessageToAndroid(postData) {
+    function postMessageToAndroid(fullRoadAddr) {
         if( window.TeamPlayAndroid != undefined){
-            window.TeamPlayAndroid.setAddress(postData);
+            window.TeamPlayAndroid.setAddress(fullRoadAddr);
         }
     }
 
