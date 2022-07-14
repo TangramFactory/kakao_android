@@ -27,13 +27,6 @@
       var params = data.params;
       console.log("onReceivedActivityMessageViaJavascriptInterface "+event);
     }
-
-    function postMessageToiOS(postData) {
-        if(window.webkti.messageHandlers != undefined){
-            window.webkit.messageHandlers.callBackHandler.postMessage(postData);
-        }
-        
-    }
     
     function postMessageToAndroid(postData) {
         if( window.TeamPlayAndroid != undefined){
