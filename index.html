@@ -28,9 +28,9 @@
       console.log("onReceivedActivityMessageViaJavascriptInterface "+event);
     }
     
-    function postMessageToAndroid(fullRoadAddr) {
+    function postMessageToAndroid(roadAddress, jibunAddress, zonecode) {
         if( window.TeamPlayAndroid != undefined){
-            window.TeamPlayAndroid.setAddress(fullRoadAddr);
+            window.TeamPlayAndroid.setAddress(roadAddress, jibunAddress, zonecode);
         }
     }
 
